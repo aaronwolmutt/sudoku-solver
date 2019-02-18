@@ -1,1 +1,68 @@
-A project to solve any 9x9 sudoku puzzle using recursive backtracking. Also includes utilities to read puzzles represented as 1D arrays.  
+## Sudoku solver
+A project that solves any 9x9 sudoku puzzle using recursive back tracking. This was developed as part of a data structures and c++ programming course taken at the University of Iowa. 
+
+Also includes utility modules to read in any 9x9 puzzle flattened to a 1D array. 
+### System wide dependencies required: 
+```
+Cmake 3.5+
+c++ 14
+```
+### Installation and usage example: 
+Build the project:
+```
+$ mkdir build; cd build; cmake ..
+```
+Compile the project: 
+```
+$ make
+```
+Execute the binary, direct a puzzles file to standard in: 
+```
+$  ./run < ../puzzles.txt
+```
+### Output sample: 
+
+```
+Found solution in 0.219449 seconds
++---+---+---+---+---+---+---+---+---+
+| 8 | 6 | 1 | 3 | 5 | 7 | 2 | 9 | 4 |
++---+---+---+---+---+---+---+---+---+
+| 5 | 9 | 7 | 4 | 8 | 2 | 3 | 6 | 1 |
++---+---+---+---+---+---+---+---+---+
+| 4 | 3 | 2 | 6 | 1 | 9 | 7 | 8 | 5 |
++---+---+---+---+---+---+---+---+---+
+| 9 | 1 | 6 | 2 | 7 | 5 | 8 | 4 | 3 |
++---+---+---+---+---+---+---+---+---+
+| 3 | 5 | 8 | 9 | 6 | 4 | 1 | 2 | 7 |
++---+---+---+---+---+---+---+---+---+
+| 2 | 7 | 4 | 1 | 3 | 8 | 9 | 5 | 6 |
++---+---+---+---+---+---+---+---+---+
+| 7 | 8 | 9 | 5 | 4 | 1 | 6 | 3 | 2 |
++---+---+---+---+---+---+---+---+---+
+| 1 | 4 | 3 | 8 | 2 | 6 | 5 | 7 | 9 |
++---+---+---+---+---+---+---+---+---+
+| 6 | 2 | 5 | 7 | 9 | 3 | 4 | 1 | 8 |
++---+---+---+---+---+---+---+---+---+
+Found solution in 0.00277045 seconds
++---+---+---+---+---+---+---+---+---+
+| 2 | 9 | 4 | 8 | 6 | 3 | 5 | 1 | 7 |
++---+---+---+---+---+---+---+---+---+
+| 7 | 1 | 5 | 4 | 2 | 9 | 6 | 3 | 8 |
++---+---+---+---+---+---+---+---+---+
+| 8 | 6 | 3 | 7 | 5 | 1 | 4 | 9 | 2 |
++---+---+---+---+---+---+---+---+---+
+| 1 | 5 | 2 | 9 | 4 | 7 | 8 | 6 | 3 |
++---+---+---+---+---+---+---+---+---+
+| 4 | 7 | 9 | 3 | 8 | 6 | 2 | 5 | 1 |
++---+---+---+---+---+---+---+---+---+
+| 6 | 3 | 8 | 5 | 1 | 2 | 9 | 7 | 4 |
++---+---+---+---+---+---+---+---+---+
+| 9 | 8 | 6 | 1 | 3 | 4 | 7 | 2 | 5 |
++---+---+---+---+---+---+---+---+---+
+| 5 | 2 | 1 | 6 | 7 | 8 | 3 | 4 | 9 |
++---+---+---+---+---+---+---+---+---+
+| 3 | 4 | 7 | 2 | 9 | 5 | 1 | 8 | 6 |
++---+---+---+---+---+---+---+---+---+
+Solved 49 puzzles in 1.92097s
+
+```

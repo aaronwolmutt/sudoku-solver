@@ -16,7 +16,7 @@ int main(int argc, char *argv[]) {
   std::cout << puzzles.size() << " puzzles loaded successfully\n";
   auto start = steady_clock::now();
   for (const auto &puzzle : puzzles) {
-    std::cout << solve(puzzle);
+    std::cout << solve(puzzle) << "\n";
   }
   auto stop = steady_clock::now();
   duration elapsed = stop - start;
